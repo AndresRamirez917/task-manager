@@ -31,6 +31,7 @@ const drawTasks = (data) => {
                   let actualndex = ((taskIndex) && (btnIndex))
                 taskArray = taskArray.filter(task => task!= actualndex)
                 console.log(taskArray)
+                console.log(taskArray)
            
                     // const idActual = taskArray.some((productoActual) => productoActual === element);
                     // console.log(idActual)
