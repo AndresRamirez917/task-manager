@@ -1,4 +1,5 @@
 let taskArray = [];
+
 let taskTemplate = document.querySelector(".task-template");
 let btnAddTask = document.querySelector(".btn-add-task");
 btnAddTask.addEventListener("click", e =>{
@@ -16,22 +17,43 @@ const drawTasks = (data) => {
             let content = document.createElement("div");
             content.className = "card";
             content.innerHTML = `   
-                <div clas="container" id="${element.id}">    
+                <div clas="container" id="${element}">    
                 <h3 class="titulo">${element}</h3>
                 <button class="boton-remove" id="botonRemove">Eliminar</button>
                 </div>
                 `;
             taskTemplate.append(content);
-            content.querySelectorAll(".boton-remove").forEach((btn) =>{
-                btn.addEventListener("click", () => {
-                  let taskIndex = taskArray.indexOf(element)
-                  console.log(taskIndex)
-                  let btnIndex = btn.id = taskIndex
-                  console.log(btnIndex)
-                  let actualndex = ((taskIndex) && (btnIndex))
-                taskArray = taskArray.filter(task => task!= actualndex)
-                console.log(taskArray)
-                console.log(taskArray)
+            let botonEliminar = document.querySelectorAll(".boton-remove")
+            botonEliminar = [...botonEliminar]
+            botonEliminar.forEach((btn) =>{
+             
+                btn.addEventListener("click", event  => {
+               
+                  // let ind = btn.indice;
+                  // if(ind===undefined){
+                  let  indo = taskArray.indexOf(element)
+                  //   console.log(ind)
+                  // }
+                
+                  console.log(botonEliminar.indexOf(btn));
+                  // if(ind !== taskArray.indexOf(element)){
+                  //   console.log("bien")
+                  // }
+
+                    taskArray.splice(botonEliminar.indexOf(content) !== taskArray.indexOf(content))
+                   console.log(taskArray)
+                  
+                  // console.log(taskArray)
+                  // console.log(taskArray.indexOf(element))
+                  // console.log(ind)
+                  //console.log(gonorrea)
+                 
+    //let actualndex = ((taskIndex) && (btnIndex))
+    // taskArray.splice(gonorrea = taskIndex)
+
+                  
+              
+        
            
                     // const idActual = taskArray.some((productoActual) => productoActual === element);
                     // console.log(idActual)
@@ -52,8 +74,16 @@ const drawTasks = (data) => {
               
     })
             
-        })        
+        })  
+              
     }
  
+    const eliminarProducto = (id) => {
+      const foundId = taskArray.find((element) => element.indice === id);
+      console.log(foundId);
+      taskArray = taskArray.filter((taskid) => {
+        return taskid !== foundId;
+      });    
       
+    };
         
