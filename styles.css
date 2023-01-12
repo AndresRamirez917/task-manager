@@ -1,0 +1,42 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #6d61b9;
+  display: flex;
+  height: 100vh;
+}
+
+.input-task{
+    margin-left: 260px;
+}
+
+.btn-add-task{
+    margin-left: 260px; 
+}
+
+
+
+h1 {
+
+  font-size: 3rem;
+  padding: 20px 200px;
+  border-radius: 50px;
+}
+
+
+  
+
+  
+  
+  
+ 
+
+
+
+
+
+
